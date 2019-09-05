@@ -20,16 +20,27 @@
     <!-- CONTENT -->
     <div class="content p-24">
 
-<!--        <ngx-charts-line-chart></ngx-charts-line-chart>-->
+        <div class="graphic-data">
+            <ngx-charts-bar-vertical-stacked
+                scheme="natural"
+                [results]="crimeTypePerMonth.data"
+                [animations]="crimeTypePerMonth.animations"
+                [legend]="crimeTypePerMonth.legend.show"
+                [xAxis]="crimeTypePerMonth.xAxis.show"
+                [yAxis]="crimeTypePerMonth.yAxis.show"
+                [showYAxisLabel]="crimeTypePerMonth.yAxis.showLabel"
+                [yAxisLabel]="crimeTypePerMonth.yAxis.label">
+            </ngx-charts-bar-vertical-stacked>
+        </div>
 
-        <ngx-charts-bar-vertical-stacked
-            scheme="flame"
-            [results]="crimeTypePerMonth.data"
-            [animations]="crimeTypePerMonth.animations"
-            [legend]="crimeTypePerMonth.legend.show"
-            [xAxis]="crimeTypePerMonth.xAxis">
-
-        </ngx-charts-bar-vertical-stacked>
+        <div class="graphic-data">
+            <ngx-charts-line-chart
+                [results]="totalCrimePerAge.data"
+                [autoScale]="totalCrimePerAge.autoscale"
+                [animations]="totalCrimePerAge.animations"
+                [xAxis]="totalCrimePerAge.xAxis.show"
+            ></ngx-charts-line-chart>
+        </div>
 
     </div>
     <!-- / CONTENT -->
