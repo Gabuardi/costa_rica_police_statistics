@@ -16,4 +16,8 @@ export class CrimesService {
         return this.http.get(this.URL);
     }
 
+    getPorcentualData(): Observable<any> {
+        return this.http.get('http://192.168.1.19:8000/delitos/percentage');
+    }
+
 }

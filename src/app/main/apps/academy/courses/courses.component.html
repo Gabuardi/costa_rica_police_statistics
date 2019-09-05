@@ -6,11 +6,10 @@
         <div class="hero-text">
             <mat-icon class="hero-icon">school</mat-icon>
             <h1 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
-                🇨🇷 DATOS DE PODER JUDICIAL 🇨🇷
+                🇨🇷 ESTADISTICAS POLICIALES 2015 - 2019 🇨🇷
             </h1>
             <h3 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
-                Our courses will step you through the process of building a small application, or adding a new feature
-                to an existing application.
+               Fuente: Datos Abiertos Poder Judicial
             </h3>
         </div>
 
@@ -29,8 +28,21 @@
                 [xAxis]="crimeTypePerMonth.xAxis.show"
                 [yAxis]="crimeTypePerMonth.yAxis.show"
                 [showYAxisLabel]="crimeTypePerMonth.yAxis.showLabel"
-                [yAxisLabel]="crimeTypePerMonth.yAxis.label">
+                [yAxisLabel]="crimeTypePerMonth.yAxis.label"
+                legendTitle="Tipo de Delitó">
             </ngx-charts-bar-vertical-stacked>
+        </div>
+
+        <div class="graphic-data">
+        <ngx-charts-bar-vertical-normalized
+            [results]="percentageData"
+            scheme="natural"
+            animations="true"
+            legend="true"
+            legendTitle="Composición por Tipo de Delitó"
+            xAxis="true"
+            yAxis="true">
+        </ngx-charts-bar-vertical-normalized>
         </div>
 
         <div class="graphic-data">
@@ -39,6 +51,7 @@
                 [autoScale]="totalCrimePerAge.autoscale"
                 [animations]="totalCrimePerAge.animations"
                 [xAxis]="totalCrimePerAge.xAxis.show"
+                yAxis="true"
             ></ngx-charts-line-chart>
         </div>
 

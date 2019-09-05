@@ -12,17 +12,24 @@ import {CrimesService} from '../../../../services/crimes.service';
 })
 export class AcademyCoursesComponent {
 
+    percentageData = null;
 
     constructor(private crimesService: CrimesService){
 
-        this.parseToLineChart(this.crimeTypePerMonth.data);
 
-        // this.crimesService.getData().subscribe(
-        //     value => {
-        //         console.log(value);
-        //         this.crimeTypePerMonth.data = value;
-        //     }
-        // );
+        this.crimesService.getData().subscribe(
+            value => {
+                console.log(value);
+                this.crimeTypePerMonth.data = value;
+                this.parseToLineChart(value);
+            }
+        );
+
+        this.crimesService.getPorcentualData().subscribe(
+            value => {
+                this.percentageData = value;
+            }
+        )
 
     }
 
@@ -55,7 +62,7 @@ export class AcademyCoursesComponent {
     // ------------------------------
     totalCrimePerAge = {
         data: totalCrimesPerAge,
-        autoscale: true,
+        autoscale: false,
         animations: true,
         xAxis: {
             show: true,
