@@ -20,8 +20,8 @@ import { locale as navigationTurkish } from 'app/navigation/i18n/tr';
     templateUrl: './app.component.html',
     styleUrls  : ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy
-{
+export class AppComponent implements OnInit, OnDestroy {
+
     fuseConfig: any;
     navigation: any;
 
