@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 @Injectable({
     providedIn: 'root'
 })
-export class CrimesService {
+export class UnlawfulActsService {
 
     URL = 'http://192.168.1.19:8000/delitos';
 

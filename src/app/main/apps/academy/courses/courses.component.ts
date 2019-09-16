@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {fuseAnimations} from '@fuse/animations';
 import {typeCrimePerMonth} from './data/typeCrimePerMonth';
 import {totalCrimesPerAge} from './data/totalCrimesPerAge';
-import {CrimesService} from '../../../../services/crimes.service';
+import {UnlawfulActsService} from '../../../../services/unlawful-acts.service';
 
 @Component({
     selector: 'academy-courses',
@@ -14,7 +14,7 @@ export class AcademyCoursesComponent {
 
     percentageData = null;
 
-    constructor(private crimesService: CrimesService){
+    constructor(private crimesService: UnlawfulActsService){
 
 
         this.crimesService.getData().subscribe(
