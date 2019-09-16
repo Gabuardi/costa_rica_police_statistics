@@ -14,26 +14,33 @@ export const navigation: FuseNavigation[] = [
                 translate: 'NAV.ACADEMY',
                 type     : 'item',
                 icon     : 'stars',
-                url      : '/apps/academy'
+                children : [
+                    {
+                        id   : 'type-unlawful-acts-quantity',
+                        title: 'Cantidad de Tipos de Délitos',
+                        type : 'item',
+                        url  : '/data-histories/police-statistics/type-unlawful-acts-quantity'
+                    }
+                ]
             },
             {
                 id       : 'dashboards',
-                title    : 'Dashboards',
+                title    : 'Estadísticas Policiales',
                 translate: 'NAV.DASHBOARDS',
                 type     : 'collapsable',
-                icon     : 'dashboard',
+                icon     : 'stars',
                 children : [
                     {
                         id   : 'analytics',
-                        title: 'Analytics',
+                        title: 'Cantidad de Tipos de Délitos',
                         type : 'item',
-                        url  : '/apps/dashboards/analytics'
+                        url  : '/data-histories/police-statistics/type-unlawful-acts-quantity'
                     },
                     {
                         id   : 'project',
-                        title: 'Project',
+                        title: 'Tendencia Délitos',
                         type : 'item',
-                        url  : '/apps/dashboards/project'
+                        url  : '/data-histories/police-statistics/unlawful-acts-trend'
                     }
                 ]
             }

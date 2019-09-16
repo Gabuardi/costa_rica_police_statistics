@@ -7,9 +7,10 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {FuseSharedModule} from '../../../@fuse/shared.module';
 import {MatIconModule} from '@angular/material';
 import { TypeUnlawfulActsQuantityComponent } from './type-unlawful-acts-quantity/type-unlawful-acts-quantity.component';
+import { UnlawfulActsTypeCompositionComponent } from './unlawful-acts-type-composition/unlawful-acts-type-composition.component';
 
 @NgModule({
-    declarations: [UnlawfulActsTrendComponent, TypeUnlawfulActsQuantityComponent],
+    declarations: [UnlawfulActsTrendComponent, TypeUnlawfulActsQuantityComponent, UnlawfulActsTypeCompositionComponent],
     imports: [
         // APP STRUCTURE
         FuseSharedModule,

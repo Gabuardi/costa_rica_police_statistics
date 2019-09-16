@@ -1,15 +1,44 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UnlawfulActsService} from '../../../services/unlawful-acts.service';
+import {typeCrimePerMonth} from '../../../main/apps/academy/courses/data/typeCrimePerMonth';
 
 @Component({
-  selector: 'app-type-unlawful-acts-quantity',
-  templateUrl: './type-unlawful-acts-quantity.component.html',
-  styleUrls: ['./type-unlawful-acts-quantity.component.scss']
+    selector: 'app-type-unlawful-acts-quantity',
+    templateUrl: './type-unlawful-acts-quantity.component.html',
+    styleUrls: ['./type-unlawful-acts-quantity.component.scss']
 })
 export class TypeUnlawfulActsQuantityComponent implements OnInit {
 
-  constructor() { }
+    // ------------------------------
+    // PROPERTIES
+    // ------------------------------
+    crimeTypePerMonth = {
+        data: typeCrimePerMonth,
+        animations: true,
+        legend: {
+            show: true,
+        },
+        xAxis: {
+            show: true
+        },
+        yAxis: {
+            show: true,
+            showLabel: true,
+            label: 'Tipo de Delito'
+        }
+    };
+    // ------------------------------
 
-  ngOnInit() {
-  }
+    constructor(private unlawfulActsService: UnlawfulActsService) {
+    }
 
-}
+    ngOnInit() {
+        this.unlawfulActsService.getData().subscribe(
+            value => {
+                console.log(value);
+                this.crimeTypePerMonth.data = value;
+            }
+        );
+    }
+
+} // COMPONENT END
