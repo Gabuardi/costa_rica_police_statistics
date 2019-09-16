@@ -41,6 +41,12 @@ export const navigation: FuseNavigation[] = [
                         title: 'Tendencia Délitos',
                         type : 'item',
                         url  : '/data-histories/police-statistics/unlawful-acts-trend'
+                    },
+                    {
+                        id   : 'project3',
+                        title: 'Composición Según Tipo',
+                        type : 'item',
+                        url  : '/data-histories/police-statistics/unlawful-acts-type-composition'
                     }
                 ]
             }
