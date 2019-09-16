@@ -7,20 +7,8 @@ const appRoutes: Routes = [
         loadChildren: './main/apps/apps.module#AppsModule'
     },
     {
-        path: 'pages',
-        loadChildren: './main/pages/pages.module#PagesModule'
-    },
-    {
-        path: 'ui',
-        loadChildren: './main/ui/ui.module#UIModule'
-    },
-    {
-        path: 'documentation',
-        loadChildren: './main/documentation/documentation.module#DocumentationModule'
-    },
-    {
-        path: 'angular-material-elements',
-        loadChildren: './main/angular-material-elements/angular-material-elements.module#AngularMaterialElementsModule'
+        path: 'data-histories',
+        loadChildren: './data-histories/data-histories.module#DataHistoriesModule'
     },
     {
         path: '**',

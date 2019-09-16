@@ -21,6 +21,7 @@ import { AppComponent } from 'app/app.component';
 import { AppStoreModule } from 'app/store/store.module';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppRoutingModule } from './app-routing.module';
+import {DataHistoriesModule} from './data-histories/data-histories.module';
 
 @NgModule({
     declarations: [
@@ -53,7 +54,8 @@ import { AppRoutingModule } from './app-routing.module';
         // App modules
         LayoutModule,
         AppStoreModule,
-        AppRoutingModule
+        DataHistoriesModule,
+        AppRoutingModule,
     ],
     bootstrap: [
         AppComponent
