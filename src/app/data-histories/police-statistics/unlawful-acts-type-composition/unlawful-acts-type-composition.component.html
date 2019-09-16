@@ -1,3 +1,40 @@
-<p>
-  unlawful-acts-type-composition works!
-</p>
+<div id="academy-courses" class="page-layout simple">
+
+    <!-- HEADER -->
+    <div class="header accent p-16 p-sm-24" fxLayout="column" fxLayoutAlign="center center">
+
+        <div class="hero-text">
+            <h1 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
+                🇨🇷 ESTADISTICAS POLICIALES 2015 - 2019 🇨🇷
+            </h1>
+            <h3 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
+                Fuente: Datos Abiertos Poder Judicial
+            </h3>
+        </div>
+
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+    <div class="content p-24 pt-36">
+
+        <span class="title">COMPOSICIÓN SEGÚN TIPO DE DÉLITO</span>
+
+        <div class="graphic-data">
+            <ngx-charts-bar-vertical-stacked
+                scheme="natural"
+                [results]="crimeTypePerMonth.data"
+                [animations]="crimeTypePerMonth.animations"
+                [legend]="crimeTypePerMonth.legend.show"
+                [xAxis]="crimeTypePerMonth.xAxis.show"
+                [yAxis]="crimeTypePerMonth.yAxis.show"
+                [showYAxisLabel]="crimeTypePerMonth.yAxis.showLabel"
+                [yAxisLabel]="crimeTypePerMonth.yAxis.label"
+                legendTitle="Tipo de Delitó">
+            </ngx-charts-bar-vertical-stacked>
+        </div>
+
+    </div>
+    <!-- / CONTENT -->
+
+</div>
