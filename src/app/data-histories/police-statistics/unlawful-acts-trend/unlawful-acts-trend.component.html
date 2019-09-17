@@ -1,12 +1,11 @@
-<div id="academy-courses" class="page-layout simple">
+<div class="page-layout simple">
 
     <!-- HEADER -->
-    <div class="header accent p-16 p-sm-24" fxLayout="column" fxLayoutAlign="center center">
+    <div class="header p-16 p-sm-24 mat-elevation-z5" fxLayout="column" fxLayoutAlign="center center">
 
-        <div class="hero-text">
-            <mat-icon class="hero-icon">school</mat-icon>
+        <div class="header-text">
             <h1 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
-                🇨🇷 ESTADISTICAS POLICIALES 2015 - 2019 🇨🇷
+                ESTADISTICAS POLICIALES
             </h1>
             <h3 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
                 Fuente: Datos Abiertos Poder Judicial
@@ -14,19 +13,15 @@
         </div>
 
     </div>
-    <!-- / HEADER -->
 
+    <!-- ---------------------- -->
     <!-- CONTENT -->
-    <div class="content p-24">
+    <div class="content">
+
+        <span class="title">Tendencia de Délitos</span>
 
         <div class="graphic-data">
-            <ngx-charts-line-chart
-                [results]="totalCrimePerAge.data"
-                [autoScale]="totalCrimePerAge.autoscale"
-                [animations]="totalCrimePerAge.animations"
-                [xAxis]="totalCrimePerAge.xAxis.show"
-                yAxis="true"
-            ></ngx-charts-line-chart>
+
         </div>
 
     </div>
