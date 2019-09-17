@@ -2,29 +2,13 @@
 
 // HEADER
 .header {
-    position: relative;
-    flex: 1 0 auto;
-    height: 220px;
-    max-height: 280px;
-    text-align: center;
+    background: linear-gradient(to right, #0E2A3B 0, #34306B 100%);
+    color: whitesmoke;
+    height: 150px;
     overflow: hidden;
+    position: relative;
 
-    @include media-breakpoint('xs') {
-        height: 240px;
-        padding: 16px;
-    }
-
-    .hero-text {
-
-        .hero-icon {
-            position: absolute;
-            top: -64px;
-            left: 0px;
-            opacity: 0.04;
-            font-size: 512px !important;
-            width: 512px !important;
-            height: 512px !important;
-        }
+    .header-text {
 
         h1 {
             font-size: 40px;
@@ -40,8 +24,9 @@
         }
 
         h3 {
+            opacity: 0.6;
             max-width: 480px;
-            text-align: center;
+            text-align: start;
             font-weight: 300;
             letter-spacing: 0.03em;
             margin: 0;
@@ -55,10 +40,12 @@
 
 // CONTENT
 .content {
+    padding: 70px 25px;
 
     .title {
-        padding-left: 65px !important;
+        padding-left: 70px;
         font-size: 28px;
+        font-weight: bold;
     }
 
     .graphic-data {
