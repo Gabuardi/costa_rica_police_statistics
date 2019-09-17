@@ -14,11 +14,11 @@ export class UnlawfulActsService {
     }
 
     getAbsoluteData(): Observable<any> {
-        return this.http.get(`${this.URL}/crimes/monthly/absolute`);
+        return this.http.get(`${this.URL}/absolute`);
     }
 
     getPercentageData(): Observable<any> {
-        return this.http.get('http://192.168.1.19:8000/delitos/percentage');
+        return this.http.get(`${this.URL}/percentage`);
     }
 
 }
