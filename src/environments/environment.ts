@@ -4,7 +4,9 @@
 
 export const environment = {
     production: false,
-    hmr       : false
+    hmr       : false,
+    api: 'https://api-dev.data2thepeople.com/cr/police-stats/api',
+    apiVersion: 'v1'
 };
 
 /*

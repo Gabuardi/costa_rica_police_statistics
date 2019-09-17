@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {UnlawfulActsService} from '../../../services/unlawful-acts.service';
-import {typeCrimePerMonth} from '../../../main/apps/academy/courses/data/typeCrimePerMonth';
 
 @Component({
     selector: 'app-type-unlawful-acts-quantity',
@@ -12,8 +11,8 @@ export class TypeUnlawfulActsQuantityComponent implements OnInit {
     // ------------------------------
     // PROPERTIES
     // ------------------------------
-    crimeTypePerMonth = {
-        data: typeCrimePerMonth,
+    chart = {
+        data: null,
         animations: true,
         legend: {
             show: true,
@@ -33,10 +32,10 @@ export class TypeUnlawfulActsQuantityComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.unlawfulActsService.getData().subscribe(
+        this.unlawfulActsService.getAbsoluteData().subscribe(
             value => {
                 console.log(value);
-                this.crimeTypePerMonth.data = value;
+                this.chart.data = value;
             }
         );
     }
