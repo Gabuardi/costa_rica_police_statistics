@@ -1,61 +1,61 @@
 <div id="academy-courses" class="page-layout simple">
 
-    <!-- HEADER -->
-    <div class="header accent p-16 p-sm-24" fxLayout="column" fxLayoutAlign="center center">
+<!--    &lt;!&ndash; HEADER &ndash;&gt;-->
+<!--    <div class="header accent p-16 p-sm-24" fxLayout="column" fxLayoutAlign="center center">-->
 
-        <div class="hero-text">
-            <mat-icon class="hero-icon">school</mat-icon>
-            <h1 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
-                🇨🇷 ESTADISTICAS POLICIALES 2015 - 2019 🇨🇷
-            </h1>
-            <h3 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
-               Fuente: Datos Abiertos Poder Judicial
-            </h3>
-        </div>
+<!--        <div class="hero-text">-->
+<!--            <mat-icon class="hero-icon">school</mat-icon>-->
+<!--            <h1 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">-->
+<!--                🇨🇷 ESTADISTICAS POLICIALES 2015 - 2019 🇨🇷-->
+<!--            </h1>-->
+<!--            <h3 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">-->
+<!--               Fuente: Datos Abiertos Poder Judicial-->
+<!--            </h3>-->
+<!--        </div>-->
 
-    </div>
-    <!-- / HEADER -->
+<!--    </div>-->
+<!--    &lt;!&ndash; / HEADER &ndash;&gt;-->
 
-    <!-- CONTENT -->
-    <div class="content p-24">
+<!--    &lt;!&ndash; CONTENT &ndash;&gt;-->
+<!--    <div class="content p-24">-->
 
-        <div class="graphic-data">
-            <ngx-charts-bar-vertical-stacked
-                scheme="natural"
-                [results]="crimeTypePerMonth.data"
-                [animations]="crimeTypePerMonth.animations"
-                [legend]="crimeTypePerMonth.legend.show"
-                [xAxis]="crimeTypePerMonth.xAxis.show"
-                [yAxis]="crimeTypePerMonth.yAxis.show"
-                [showYAxisLabel]="crimeTypePerMonth.yAxis.showLabel"
-                [yAxisLabel]="crimeTypePerMonth.yAxis.label"
-                legendTitle="Tipo de Delitó">
-            </ngx-charts-bar-vertical-stacked>
-        </div>
+<!--        <div class="graphic-data">-->
+<!--            <ngx-charts-bar-vertical-stacked-->
+<!--                scheme="natural"-->
+<!--                [results]="crimeTypePerMonth.data"-->
+<!--                [animations]="crimeTypePerMonth.animations"-->
+<!--                [legend]="crimeTypePerMonth.legend.show"-->
+<!--                [xAxis]="crimeTypePerMonth.xAxis.show"-->
+<!--                [yAxis]="crimeTypePerMonth.yAxis.show"-->
+<!--                [showYAxisLabel]="crimeTypePerMonth.yAxis.showLabel"-->
+<!--                [yAxisLabel]="crimeTypePerMonth.yAxis.label"-->
+<!--                legendTitle="Tipo de Delitó">-->
+<!--            </ngx-charts-bar-vertical-stacked>-->
+<!--        </div>-->
 
-        <div class="graphic-data">
-        <ngx-charts-bar-vertical-normalized
-            [results]="percentageData"
-            scheme="natural"
-            animations="true"
-            legend="true"
-            legendTitle="Composición por Tipo de Delitó"
-            xAxis="true"
-            yAxis="true">
-        </ngx-charts-bar-vertical-normalized>
-        </div>
+<!--        <div class="graphic-data">-->
+<!--        <ngx-charts-bar-vertical-normalized-->
+<!--            [results]="percentageData"-->
+<!--            scheme="natural"-->
+<!--            animations="true"-->
+<!--            legend="true"-->
+<!--            legendTitle="Composición por Tipo de Delitó"-->
+<!--            xAxis="true"-->
+<!--            yAxis="true">-->
+<!--        </ngx-charts-bar-vertical-normalized>-->
+<!--        </div>-->
 
-        <div class="graphic-data">
-            <ngx-charts-line-chart
-                [results]="totalCrimePerAge.data"
-                [autoScale]="totalCrimePerAge.autoscale"
-                [animations]="totalCrimePerAge.animations"
-                [xAxis]="totalCrimePerAge.xAxis.show"
-                yAxis="true"
-            ></ngx-charts-line-chart>
-        </div>
+<!--        <div class="graphic-data">-->
+<!--            <ngx-charts-line-chart-->
+<!--                [results]="totalCrimePerAge.data"-->
+<!--                [autoScale]="totalCrimePerAge.autoscale"-->
+<!--                [animations]="totalCrimePerAge.animations"-->
+<!--                [xAxis]="totalCrimePerAge.xAxis.show"-->
+<!--                yAxis="true"-->
+<!--            ></ngx-charts-line-chart>-->
+<!--        </div>-->
 
-    </div>
+<!--    </div>-->
     <!-- / CONTENT -->
 
 </div>

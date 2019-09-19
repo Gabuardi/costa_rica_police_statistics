@@ -17,19 +17,19 @@ export class AcademyCoursesComponent {
     constructor(private crimesService: UnlawfulActsService){
 
 
-        this.crimesService.getData().subscribe(
-            value => {
-                console.log(value);
-                this.crimeTypePerMonth.data = value;
-                this.parseToLineChart(value);
-            }
-        );
+        // this.crimesService.getData().subscribe(
+        //     value => {
+        //         console.log(value);
+        //         // this.crimeTypePerMonth.data = value;
+        //         // this.parseToLineChart(value);
+        //     }
+        // );
 
-        this.crimesService.getPorcentualData().subscribe(
-            value => {
-                this.percentageData = value;
-            }
-        )
+        // this.crimesService.getPorcentualData().subscribe(
+        //     value => {
+        //         this.percentageData = value;
+        //     }
+        // )
 
     }
 
